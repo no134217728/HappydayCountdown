@@ -12,6 +12,13 @@ class Utilities {
     
     var moneyDay: Int
     
+    var todayDate: (String) -> (String) = { _ -> String in return "" }
+    var nextMoneyDate: (String) -> (String) = { _ -> String in return "" }
+    var toNextMoneyDays: (String) -> (String) = { _ -> String in return "" }
+    var nextLongHolidayDate: (String) -> (String) = { _ -> String in return "" }
+    var toNextLongHolidayDaysTitle: (String) -> (String) = { _ -> String in return "" }
+    var toNextLongHolidayDays: (String) -> (String) = { _ -> String in return "" }
+    
     init(moneyGetDay: Int = 5) {
         moneyDay = moneyGetDay
         let timer = Timer(fireAt: Date(), interval: 60, target: self, selector: #selector(computeAllDayData), userInfo: nil, repeats: true)
@@ -22,23 +29,23 @@ class Utilities {
         let dateFormatter = DateFormatter.init()
         dateFormatter.dateFormat = "M 月 d 日"
                 
-        let todayDate = Utilities.shared.dateAndcomponentFromDateWithNoTime().date
-        let todayComponent = todayDate.clearedTimeDateAndComponent().components
+        let dateToday = Utilities.shared.dateAndcomponentFromDateWithNoTime().date
+        let todayComponent = dateToday.clearedTimeDateAndComponent().components
         guard let todayDay = todayComponent.day else {
             fatalError("No day value due to the dateComponents failure.")
         }
-        saveStringToUserDefault(content: dateFormatter.string(from: todayDate), theKey: .todayDate)
+        saveStringToUserDefault(content: todayDate(dateFormatter.string(from: dateToday)), theKey: .todayDate)
         
         let addMonth = todayDay > moneyDay ? 1 : 0
-        var nextMoneyComponent = Utilities.shared.dateAndcomponentFromDateWithNoTime(date: todayDate, addMonth: addMonth).components
+        var nextMoneyComponent = Utilities.shared.dateAndcomponentFromDateWithNoTime(date: dateToday, addMonth: addMonth).components
         nextMoneyComponent.day = moneyDay
         
-        let nextMoneyDate = nextMoneyComponent.clearedTimeDateAndComponent().date
-        guard let toNextMoneyDays = Calendar.current.dateComponents([.day], from: todayComponent, to: nextMoneyComponent).day else {
+        let dateForNextMoney = nextMoneyComponent.clearedTimeDateAndComponent().date
+        guard let daysToNextMoneyDate = Calendar.current.dateComponents([.day], from: todayComponent, to: nextMoneyComponent).day else {
             fatalError("Cannot compute the days due to the moneyday components failure.")
         }
-        saveStringToUserDefault(content: dateFormatter.string(from: nextMoneyDate), theKey: .nextMoneyDate)
-        saveStringToUserDefault(content: "\(toNextMoneyDays) 天", theKey: .toNextMoneyDays)
+        saveStringToUserDefault(content: nextMoneyDate(dateFormatter.string(from: dateForNextMoney)), theKey: .nextMoneyDate)
+        saveStringToUserDefault(content: toNextMoneyDays("\(daysToNextMoneyDate) 天"), theKey: .toNextMoneyDays)
         
         let holidayComponents = [Utilities.shared.holidaySetup(month: 1, day: 29),
                                  Utilities.shared.holidaySetup(month: 2, day: 26),
@@ -48,19 +55,19 @@ class Utilities {
                                  Utilities.shared.holidaySetup(month: 9, day: 9),
                                  Utilities.shared.holidaySetup(month: 10, day: 8),
                                  Utilities.shared.holidaySetup(month: 12, day: 31)]
-        saveStringToUserDefault(content: "沒連假惹", theKey: .nextLongHolidayDate)
-        saveStringToUserDefault(content: "離職倒數？", theKey: .toNextLongHolidayDaysTitle)
-        saveStringToUserDefault(content: "1 天", theKey: .toNextLongHolidayDays)
+        saveStringToUserDefault(content: nextLongHolidayDate("沒連假惹"), theKey: .nextLongHolidayDate)
+        saveStringToUserDefault(content: toNextLongHolidayDaysTitle("離職倒數？"), theKey: .toNextLongHolidayDaysTitle)
+        saveStringToUserDefault(content: toNextLongHolidayDays("1 天"), theKey: .toNextLongHolidayDays)
         
         for holidayComponent in holidayComponents {
-            guard let toNextLongHolidayDays = Calendar.current.dateComponents([.day], from: todayComponent, to: holidayComponent).day else {
+            guard let daysToNextLongHoliday = Calendar.current.dateComponents([.day], from: todayComponent, to: holidayComponent).day else {
                 fatalError("Cannot compute the days due to the holiday components failure.")
             }
-            if toNextLongHolidayDays >= 0 {
-                let nextLongHolidayDate = holidayComponent.clearedTimeDateAndComponent().date
-                saveStringToUserDefault(content: dateFormatter.string(from: nextLongHolidayDate), theKey: .nextLongHolidayDate)
-                saveStringToUserDefault(content: "連假倒數", theKey: .toNextLongHolidayDaysTitle)
-                saveStringToUserDefault(content: "\(toNextLongHolidayDays) 天", theKey: .toNextLongHolidayDays)
+            if daysToNextLongHoliday >= 0 {
+                let dateNextLongHoliday = holidayComponent.clearedTimeDateAndComponent().date
+                saveStringToUserDefault(content: nextLongHolidayDate(dateFormatter.string(from: dateNextLongHoliday)), theKey: .nextLongHolidayDate)
+                saveStringToUserDefault(content: toNextLongHolidayDaysTitle("連假倒數"), theKey: .toNextLongHolidayDaysTitle)
+                saveStringToUserDefault(content: toNextLongHolidayDays("\(daysToNextLongHoliday) 天"), theKey: .toNextLongHolidayDays)
                 
                 break
             }
