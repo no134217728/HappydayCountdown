@@ -24,7 +24,7 @@ class Utilities {
     
     init(moneyGetDay: Int = 5) {
         moneyDay = moneyGetDay
-        _ = Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance).subscribe { [weak self] dt in
+        _ = Observable<Int>.interval(.seconds(60), scheduler: MainScheduler.instance).subscribe { [weak self] dt in
             guard let self = self else {
                 return
             }
@@ -33,7 +33,7 @@ class Utilities {
         }
     }
     
-    @objc func computeAllDayData() {
+    func computeAllDayData() {
         let dateFormatter = DateFormatter.init()
         dateFormatter.dateFormat = "M 月 d 日"
         
@@ -92,7 +92,7 @@ class Utilities {
         saveStringToUserDefault(content: "1 天", theKey: .toNextLongHolidayDays)
     }
     
-    func dateAndcomponentFromDateWithNoTime(date: Date = Date(), addYear: Int = 0, addMonth: Int = 0, addDay: Int = 0) -> (date: Date, components: DateComponents) {
+    private func dateAndcomponentFromDateWithNoTime(date: Date = Date(), addYear: Int = 0, addMonth: Int = 0, addDay: Int = 0) -> (date: Date, components: DateComponents) {
         var dateComponentForAdd = DateComponents()
         dateComponentForAdd.year = addYear
         dateComponentForAdd.month = addMonth
@@ -105,7 +105,7 @@ class Utilities {
         return (adjustedDate.clearedTimeDateAndComponent().date, adjustedDate.clearedTimeDateAndComponent().components)
     }
     
-    func holidaySetup(month: Int, day: Int) -> DateComponents {
+    private func holidaySetup(month: Int, day: Int) -> DateComponents {
         var holidayComponent = Calendar.current.dateComponents(in: .current, from: Date())
         holidayComponent.month = month
         holidayComponent.day = day
@@ -117,7 +117,7 @@ class Utilities {
         return holidayComponent.clearedTimeDateAndComponent().components
     }
     
-    func saveStringToUserDefault(content: String, theKey: UserDefaultKeys) {
+    private func saveStringToUserDefault(content: String, theKey: UserDefaultKeys) {
         let userDefault = UserDefaults.standard
         userDefault.setValue(content, forKey: theKey.rawValue)
     }
