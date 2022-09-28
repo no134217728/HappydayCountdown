@@ -23,7 +23,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(becomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTheData), name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTheData), name: UIApplication.didEnterBackgroundNotification, object: nil)
         
         today.text = ""
         nextMoneyDay.text = ""
@@ -43,13 +44,8 @@ class ViewController: UIViewController {
         Utilities.shared.toNextLongHolidayDays.bind(to: nextLongHolidayCountdown.rx.text).disposed(by: disposeBag)
     }
     
-    @objc func becomeActive(_ notification: Notification)  {
-        today.text = Utilities.shared.takeStringFromUserDefault(theKey: .todayDate)
-        nextMoneyDay.text = Utilities.shared.takeStringFromUserDefault(theKey: .nextMoneyDate)
-        nextMoneyCountdown.text = Utilities.shared.takeStringFromUserDefault(theKey: .toNextMoneyDays)
-        nextLongHoliday.text = Utilities.shared.takeStringFromUserDefault(theKey: .nextLongHolidayDate)
-        nextLongHolidayTitle.text = Utilities.shared.takeStringFromUserDefault(theKey: .toNextLongHolidayDaysTitle)
-        nextLongHolidayCountdown.text = Utilities.shared.takeStringFromUserDefault(theKey: .toNextLongHolidayDays)
+    @objc func updateTheData(_ notification: Notification)  {
+        Utilities.shared.computeAllDayData()
     }
 }
 
