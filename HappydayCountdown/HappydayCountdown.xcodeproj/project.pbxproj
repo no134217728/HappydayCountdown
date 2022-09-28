@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20C21AB228CF104700DC9CD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C21AB128CF104700DC9CD3 /* AppDelegate.swift */; };
+		20C21AB628CF104700DC9CD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C21AB528CF104700DC9CD3 /* ViewController.swift */; };
+		20C21AB928CF104700DC9CD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C21AB728CF104700DC9CD3 /* Main.storyboard */; };
+		20C21ABB28CF104B00DC9CD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C21ABA28CF104B00DC9CD3 /* Assets.xcassets */; };
+		20C21ABE28CF104B00DC9CD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C21ABC28CF104B00DC9CD3 /* LaunchScreen.storyboard */; };
+		20C21ACC28D0138100DC9CD3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C21ACB28D0138100DC9CD3 /* WidgetKit.framework */; };
+		20C21ACE28D0138100DC9CD3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C21ACD28D0138100DC9CD3 /* SwiftUI.framework */; };
+		20C21AD128D0138100DC9CD3 /* DayCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C21AD028D0138100DC9CD3 /* DayCountdown.swift */; };
+		20C21AD428D0138500DC9CD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C21AD328D0138500DC9CD3 /* Assets.xcassets */; };
+		20C21AD628D0138500DC9CD3 /* DayCountdown.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 20C21AD228D0138100DC9CD3 /* DayCountdown.intentdefinition */; };
+		20C21AD728D0138500DC9CD3 /* DayCountdown.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 20C21AD228D0138100DC9CD3 /* DayCountdown.intentdefinition */; };
+		20C21ADA28D0138500DC9CD3 /* DayCountdownExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 20C21AC928D0138100DC9CD3 /* DayCountdownExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D217137928DAFD010014C6C4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E0CBA528D412F80022B25F /* Utilities.swift */; };
+		D217137A28DAFD250014C6C4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E0CBA728D413690022B25F /* Extensions.swift */; };
+		D2E0CBA628D412F80022B25F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E0CBA528D412F80022B25F /* Utilities.swift */; };
+		D2E0CBA828D413690022B25F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E0CBA728D413690022B25F /* Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20C21AD828D0138500DC9CD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20C21AA628CF104700DC9CD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20C21AC828D0138100DC9CD3;
+			remoteInfo = DayCountdownExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		20C21ADB28D0138500DC9CD3 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				20C21ADA28D0138500DC9CD3 /* DayCountdownExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		20C21AAE28CF104700DC9CD3 /* HappydayCountdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappydayCountdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C21AB128CF104700DC9CD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20C21AB528CF104700DC9CD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		20C21AB828CF104700DC9CD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		20C21ABA28CF104B00DC9CD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20C21ABD28CF104B00DC9CD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		20C21ABF28CF104B00DC9CD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20C21AC928D0138100DC9CD3 /* DayCountdownExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DayCountdownExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C21ACB28D0138100DC9CD3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		20C21ACD28D0138100DC9CD3 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		20C21AD028D0138100DC9CD3 /* DayCountdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCountdown.swift; sourceTree = "<group>"; };
+		20C21AD228D0138100DC9CD3 /* DayCountdown.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = DayCountdown.intentdefinition; sourceTree = "<group>"; };
+		20C21AD328D0138500DC9CD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20C21AD528D0138500DC9CD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20EFC7AF28D0240D003B2CCF /* HappydayCountdown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HappydayCountdown.entitlements; sourceTree = "<group>"; };
+		20EFC7B028D02464003B2CCF /* DayCountdownExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DayCountdownExtension.entitlements; sourceTree = "<group>"; };
+		D2E0CBA528D412F80022B25F /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		D2E0CBA728D413690022B25F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20C21AAB28CF104700DC9CD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C21AC628D0138100DC9CD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C21ACE28D0138100DC9CD3 /* SwiftUI.framework in Frameworks */,
+				20C21ACC28D0138100DC9CD3 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20C21AA528CF104700DC9CD3 = {
+			isa = PBXGroup;
+			children = (
+				20EFC7B028D02464003B2CCF /* DayCountdownExtension.entitlements */,
+				20C21AB028CF104700DC9CD3 /* HappydayCountdown */,
+				20C21ACF28D0138100DC9CD3 /* DayCountdown */,
+				20C21ACA28D0138100DC9CD3 /* Frameworks */,
+				20C21AAF28CF104700DC9CD3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20C21AAF28CF104700DC9CD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20C21AAE28CF104700DC9CD3 /* HappydayCountdown.app */,
+				20C21AC928D0138100DC9CD3 /* DayCountdownExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20C21AB028CF104700DC9CD3 /* HappydayCountdown */ = {
+			isa = PBXGroup;
+			children = (
+				20EFC7AF28D0240D003B2CCF /* HappydayCountdown.entitlements */,
+				20C21AB128CF104700DC9CD3 /* AppDelegate.swift */,
+				D2E0CBA728D413690022B25F /* Extensions.swift */,
+				D2E0CBA528D412F80022B25F /* Utilities.swift */,
+				20C21AB528CF104700DC9CD3 /* ViewController.swift */,
+				20C21AB728CF104700DC9CD3 /* Main.storyboard */,
+				20C21ABA28CF104B00DC9CD3 /* Assets.xcassets */,
+				20C21ABC28CF104B00DC9CD3 /* LaunchScreen.storyboard */,
+				20C21ABF28CF104B00DC9CD3 /* Info.plist */,
+			);
+			path = HappydayCountdown;
+			sourceTree = "<group>";
+		};
+		20C21ACA28D0138100DC9CD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20C21ACB28D0138100DC9CD3 /* WidgetKit.framework */,
+				20C21ACD28D0138100DC9CD3 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20C21ACF28D0138100DC9CD3 /* DayCountdown */ = {
+			isa = PBXGroup;
+			children = (
+				20C21AD028D0138100DC9CD3 /* DayCountdown.swift */,
+				20C21AD228D0138100DC9CD3 /* DayCountdown.intentdefinition */,
+				20C21AD328D0138500DC9CD3 /* Assets.xcassets */,
+				20C21AD528D0138500DC9CD3 /* Info.plist */,
+			);
+			path = DayCountdown;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20C21AAD28CF104700DC9CD3 /* HappydayCountdown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20C21AC228CF104B00DC9CD3 /* Build configuration list for PBXNativeTarget "HappydayCountdown" */;
+			buildPhases = (
+				20C21AAA28CF104700DC9CD3 /* Sources */,
+				20C21AAB28CF104700DC9CD3 /* Frameworks */,
+				20C21AAC28CF104700DC9CD3 /* Resources */,
+				20C21ADB28D0138500DC9CD3 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20C21AD928D0138500DC9CD3 /* PBXTargetDependency */,
+			);
+			name = HappydayCountdown;
+			productName = HappydayCountdown;
+			productReference = 20C21AAE28CF104700DC9CD3 /* HappydayCountdown.app */;
+			productType = "com.apple.product-type.application";
+		};
+		20C21AC828D0138100DC9CD3 /* DayCountdownExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20C21ADE28D0138500DC9CD3 /* Build configuration list for PBXNativeTarget "DayCountdownExtension" */;
+			buildPhases = (
+				20C21AC528D0138100DC9CD3 /* Sources */,
+				20C21AC628D0138100DC9CD3 /* Frameworks */,
+				20C21AC728D0138100DC9CD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DayCountdownExtension;
+			productName = DayCountdownExtension;
+			productReference = 20C21AC928D0138100DC9CD3 /* DayCountdownExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20C21AA628CF104700DC9CD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					20C21AAD28CF104700DC9CD3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					20C21AC828D0138100DC9CD3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 20C21AA928CF104700DC9CD3 /* Build configuration list for PBXProject "HappydayCountdown" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 20C21AA528CF104700DC9CD3;
+			productRefGroup = 20C21AAF28CF104700DC9CD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20C21AAD28CF104700DC9CD3 /* HappydayCountdown */,
+				20C21AC828D0138100DC9CD3 /* DayCountdownExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20C21AAC28CF104700DC9CD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C21ABE28CF104B00DC9CD3 /* LaunchScreen.storyboard in Resources */,
+				20C21ABB28CF104B00DC9CD3 /* Assets.xcassets in Resources */,
+				20C21AB928CF104700DC9CD3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C21AC728D0138100DC9CD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C21AD428D0138500DC9CD3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20C21AAA28CF104700DC9CD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2E0CBA828D413690022B25F /* Extensions.swift in Sources */,
+				20C21AD728D0138500DC9CD3 /* DayCountdown.intentdefinition in Sources */,
+				20C21AB628CF104700DC9CD3 /* ViewController.swift in Sources */,
+				D2E0CBA628D412F80022B25F /* Utilities.swift in Sources */,
+				20C21AB228CF104700DC9CD3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C21AC528D0138100DC9CD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D217137A28DAFD250014C6C4 /* Extensions.swift in Sources */,
+				20C21AD128D0138100DC9CD3 /* DayCountdown.swift in Sources */,
+				20C21AD628D0138500DC9CD3 /* DayCountdown.intentdefinition in Sources */,
+				D217137928DAFD010014C6C4 /* Utilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20C21AD928D0138500DC9CD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20C21AC828D0138100DC9CD3 /* DayCountdownExtension */;
+			targetProxy = 20C21AD828D0138500DC9CD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		20C21AB728CF104700DC9CD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20C21AB828CF104700DC9CD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		20C21ABC28CF104B00DC9CD3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20C21ABD28CF104B00DC9CD3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20C21AC028CF104B00DC9CD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		20C21AC128CF104B00DC9CD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20C21AC328CF104B00DC9CD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HappydayCountdown/HappydayCountdown.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 295LQ6NQJV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HappydayCountdown/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TPIsoftware.HappydayCountdown;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20C21AC428CF104B00DC9CD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HappydayCountdown/HappydayCountdown.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 295LQ6NQJV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HappydayCountdown/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TPIsoftware.HappydayCountdown;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		20C21ADC28D0138500DC9CD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = DayCountdownExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 295LQ6NQJV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DayCountdown/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DayCountdown;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TPIsoftware.HappydayCountdown.DayCountdown;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20C21ADD28D0138500DC9CD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = DayCountdownExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 295LQ6NQJV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DayCountdown/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DayCountdown;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TPIsoftware.HappydayCountdown.DayCountdown;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20C21AA928CF104700DC9CD3 /* Build configuration list for PBXProject "HappydayCountdown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20C21AC028CF104B00DC9CD3 /* Debug */,
+				20C21AC128CF104B00DC9CD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20C21AC228CF104B00DC9CD3 /* Build configuration list for PBXNativeTarget "HappydayCountdown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20C21AC328CF104B00DC9CD3 /* Debug */,
+				20C21AC428CF104B00DC9CD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20C21ADE28D0138500DC9CD3 /* Build configuration list for PBXNativeTarget "DayCountdownExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20C21ADC28D0138500DC9CD3 /* Debug */,
+				20C21ADD28D0138500DC9CD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20C21AA628CF104700DC9CD3 /* Project object */;
+}

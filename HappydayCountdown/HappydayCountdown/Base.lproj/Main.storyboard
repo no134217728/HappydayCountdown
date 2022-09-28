@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HappydayCountdown" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpB-o7-9ai">
+                                <rect key="frame" x="40" y="72" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smv-37-Dpt">
+                                <rect key="frame" x="180" y="72" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下次領錢日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCo-cX-u4y">
+                                <rect key="frame" x="40" y="117" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NextMoney" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Feg-uc-nZ5">
+                                <rect key="frame" x="180" y="117" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="領錢倒數" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRy-Tq-Ml3">
+                                <rect key="frame" x="40" y="162" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DaysToNextMoney" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2e-jf-P6A">
+                                <rect key="frame" x="180" y="162" width="141.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下次連假開始" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZ2-7s-GnE">
+                                <rect key="frame" x="40" y="207" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NextHoliday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZe-Fb-hdG">
+                                <rect key="frame" x="180" y="207" width="92.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="連假倒數" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZR-3Q-I9V">
+                                <rect key="frame" x="40" y="252" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DaysToNextHoliday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFQ-T3-TCv">
+                                <rect key="frame" x="180" y="252" width="147" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PZe-Fb-hdG" firstAttribute="centerY" secondItem="mZ2-7s-GnE" secondAttribute="centerY" id="2aS-F5-OcY"/>
+                            <constraint firstItem="Feg-uc-nZ5" firstAttribute="leading" secondItem="smv-37-Dpt" secondAttribute="leading" id="3ek-vd-jzD"/>
+                            <constraint firstItem="Feg-uc-nZ5" firstAttribute="centerY" secondItem="zCo-cX-u4y" secondAttribute="centerY" id="4DP-BV-b6Q"/>
+                            <constraint firstItem="smv-37-Dpt" firstAttribute="leading" secondItem="zCo-cX-u4y" secondAttribute="trailing" constant="36" id="IOA-XH-UQm"/>
+                            <constraint firstItem="WpB-o7-9ai" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="JLv-dp-9l0"/>
+                            <constraint firstItem="WpB-o7-9ai" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="NI0-RF-QHP"/>
+                            <constraint firstItem="K2e-jf-P6A" firstAttribute="centerY" secondItem="PRy-Tq-Ml3" secondAttribute="centerY" id="O7s-9n-7lr"/>
+                            <constraint firstItem="PZe-Fb-hdG" firstAttribute="leading" secondItem="K2e-jf-P6A" secondAttribute="leading" id="SZr-Q5-dST"/>
+                            <constraint firstItem="mZ2-7s-GnE" firstAttribute="leading" secondItem="PRy-Tq-Ml3" secondAttribute="leading" id="TqM-fv-DUl"/>
+                            <constraint firstItem="smv-37-Dpt" firstAttribute="centerY" secondItem="WpB-o7-9ai" secondAttribute="centerY" id="WAA-Zs-qhD"/>
+                            <constraint firstItem="iZR-3Q-I9V" firstAttribute="top" secondItem="mZ2-7s-GnE" secondAttribute="bottom" constant="24" id="YX5-f8-EwF"/>
+                            <constraint firstItem="K2e-jf-P6A" firstAttribute="leading" secondItem="Feg-uc-nZ5" secondAttribute="leading" id="ZKn-d4-hzR"/>
+                            <constraint firstItem="BFQ-T3-TCv" firstAttribute="leading" secondItem="PZe-Fb-hdG" secondAttribute="leading" id="Zwk-dh-Jtu"/>
+                            <constraint firstItem="zCo-cX-u4y" firstAttribute="leading" secondItem="WpB-o7-9ai" secondAttribute="leading" id="ceU-zk-PpR"/>
+                            <constraint firstItem="mZ2-7s-GnE" firstAttribute="top" secondItem="PRy-Tq-Ml3" secondAttribute="bottom" constant="24" id="gIn-aO-BOH"/>
+                            <constraint firstItem="zCo-cX-u4y" firstAttribute="top" secondItem="WpB-o7-9ai" secondAttribute="bottom" constant="24" id="h8G-ij-fDV"/>
+                            <constraint firstItem="BFQ-T3-TCv" firstAttribute="centerY" secondItem="iZR-3Q-I9V" secondAttribute="centerY" id="nvr-Ag-6u5"/>
+                            <constraint firstItem="iZR-3Q-I9V" firstAttribute="leading" secondItem="mZ2-7s-GnE" secondAttribute="leading" id="rKC-3M-hzZ"/>
+                            <constraint firstItem="PRy-Tq-Ml3" firstAttribute="top" secondItem="zCo-cX-u4y" secondAttribute="bottom" constant="24" id="rzW-DM-ZwE"/>
+                            <constraint firstItem="PRy-Tq-Ml3" firstAttribute="leading" secondItem="zCo-cX-u4y" secondAttribute="leading" id="z9G-Na-kuH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextLongHoliday" destination="PZe-Fb-hdG" id="IBH-ke-UuH"/>
+                        <outlet property="nextLongHolidayCountdown" destination="BFQ-T3-TCv" id="wPq-UL-Sc8"/>
+                        <outlet property="nextLongHolidayTitle" destination="iZR-3Q-I9V" id="Pih-7F-WkK"/>
+                        <outlet property="nextMoneyCountdown" destination="K2e-jf-P6A" id="Qlj-Ff-WZT"/>
+                        <outlet property="nextMoneyDay" destination="Feg-uc-nZ5" id="WP9-An-oLD"/>
+                        <outlet property="today" destination="smv-37-Dpt" id="gR3-0O-LcS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
