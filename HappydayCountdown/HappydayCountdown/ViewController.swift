@@ -7,6 +7,9 @@
 
 import UIKit
 
+import RxSwift
+import RxCocoa
+
 class ViewController: UIViewController {
     @IBOutlet weak var today: UILabel!
     @IBOutlet weak var nextMoneyDay: UILabel!
@@ -14,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var nextLongHoliday: UILabel!
     @IBOutlet weak var nextLongHolidayTitle: UILabel!
     @IBOutlet weak var nextLongHolidayCountdown: UILabel!
+    
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,59 +35,12 @@ class ViewController: UIViewController {
     }
     
     private func bindData() {
-        Utilities.shared.todayDate = { [weak self] dateToday -> String in
-            guard let self = self else {
-                return dateToday
-            }
-            
-            self.today.text = dateToday
-            return dateToday
-        }
-        
-        Utilities.shared.nextMoneyDate = { [weak self] dateNextMoney -> String in
-            guard let self = self else {
-                return dateNextMoney
-            }
-            
-            self.nextMoneyDay.text = dateNextMoney
-            return dateNextMoney
-        }
-        
-        Utilities.shared.toNextMoneyDays = { [weak self] daysToNextMoney -> String in
-            guard let self = self else {
-                return daysToNextMoney
-            }
-            
-            self.nextMoneyCountdown.text = daysToNextMoney
-            return daysToNextMoney
-        }
-        
-        Utilities.shared.nextLongHolidayDate = { [weak self] dateNextLongHoliday -> String in
-            guard let self = self else {
-                return dateNextLongHoliday
-            }
-            
-            self.nextLongHoliday.text = dateNextLongHoliday
-            return dateNextLongHoliday
-        }
-        
-        Utilities.shared.toNextLongHolidayDaysTitle = { [weak self] titleToNextLongHoliday -> String in
-            guard let self = self else {
-                return titleToNextLongHoliday
-            }
-            
-            self.nextLongHolidayTitle.text = titleToNextLongHoliday
-            return titleToNextLongHoliday
-        }
-        
-        Utilities.shared.toNextLongHolidayDays = { [weak self] daysToNextLongHoliday -> String in
-            guard let self = self else {
-                return daysToNextLongHoliday
-            }
-            
-            self.nextLongHolidayCountdown.text = daysToNextLongHoliday
-            return daysToNextLongHoliday
-        }
+        Utilities.shared.todayDate.bind(to: today.rx.text).disposed(by: disposeBag)
+        Utilities.shared.nextMoneyDate.bind(to: nextMoneyDay.rx.text).disposed(by: disposeBag)
+        Utilities.shared.toNextMoneyDays.bind(to: nextMoneyCountdown.rx.text).disposed(by: disposeBag)
+        Utilities.shared.nextLongHolidayDate.bind(to: nextLongHoliday.rx.text).disposed(by: disposeBag)
+        Utilities.shared.toNextLongHolidayDaysTitle.bind(to: nextLongHolidayTitle.rx.text).disposed(by: disposeBag)
+        Utilities.shared.toNextLongHolidayDays.bind(to: nextLongHolidayCountdown.rx.text).disposed(by: disposeBag)
     }
     
     @objc func becomeActive(_ notification: Notification)  {

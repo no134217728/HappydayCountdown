@@ -21,6 +21,12 @@
 		20C21ADA28D0138500DC9CD3 /* DayCountdownExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 20C21AC928D0138100DC9CD3 /* DayCountdownExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D217137928DAFD010014C6C4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E0CBA528D412F80022B25F /* Utilities.swift */; };
 		D217137A28DAFD250014C6C4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E0CBA728D413690022B25F /* Extensions.swift */; };
+		D2BD72C528E2CAD500AF8DB9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D2BD72C428E2CAD500AF8DB9 /* RxCocoa */; };
+		D2BD72C728E2CAD500AF8DB9 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = D2BD72C628E2CAD500AF8DB9 /* RxRelay */; };
+		D2BD72C928E2CAD500AF8DB9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D2BD72C828E2CAD500AF8DB9 /* RxSwift */; };
+		D2BD72CB28E2CAE600AF8DB9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D2BD72CA28E2CAE600AF8DB9 /* RxCocoa */; };
+		D2BD72CD28E2CAE600AF8DB9 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = D2BD72CC28E2CAE600AF8DB9 /* RxRelay */; };
+		D2BD72CF28E2CAE600AF8DB9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D2BD72CE28E2CAE600AF8DB9 /* RxSwift */; };
 		D2E0CBA628D412F80022B25F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E0CBA528D412F80022B25F /* Utilities.swift */; };
 		D2E0CBA828D413690022B25F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E0CBA728D413690022B25F /* Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -75,6 +81,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2BD72C928E2CAD500AF8DB9 /* RxSwift in Frameworks */,
+				D2BD72C728E2CAD500AF8DB9 /* RxRelay in Frameworks */,
+				D2BD72C528E2CAD500AF8DB9 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +91,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2BD72CB28E2CAE600AF8DB9 /* RxCocoa in Frameworks */,
 				20C21ACE28D0138100DC9CD3 /* SwiftUI.framework in Frameworks */,
+				D2BD72CF28E2CAE600AF8DB9 /* RxSwift in Frameworks */,
+				D2BD72CD28E2CAE600AF8DB9 /* RxRelay in Frameworks */,
 				20C21ACC28D0138100DC9CD3 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +176,11 @@
 				20C21AD928D0138500DC9CD3 /* PBXTargetDependency */,
 			);
 			name = HappydayCountdown;
+			packageProductDependencies = (
+				D2BD72C428E2CAD500AF8DB9 /* RxCocoa */,
+				D2BD72C628E2CAD500AF8DB9 /* RxRelay */,
+				D2BD72C828E2CAD500AF8DB9 /* RxSwift */,
+			);
 			productName = HappydayCountdown;
 			productReference = 20C21AAE28CF104700DC9CD3 /* HappydayCountdown.app */;
 			productType = "com.apple.product-type.application";
@@ -181,6 +198,11 @@
 			dependencies = (
 			);
 			name = DayCountdownExtension;
+			packageProductDependencies = (
+				D2BD72CA28E2CAE600AF8DB9 /* RxCocoa */,
+				D2BD72CC28E2CAE600AF8DB9 /* RxRelay */,
+				D2BD72CE28E2CAE600AF8DB9 /* RxSwift */,
+			);
 			productName = DayCountdownExtension;
 			productReference = 20C21AC928D0138100DC9CD3 /* DayCountdownExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -212,6 +234,9 @@
 				Base,
 			);
 			mainGroup = 20C21AA528CF104700DC9CD3;
+			packageReferences = (
+				D2BD72C328E2CAD500AF8DB9 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 20C21AAF28CF104700DC9CD3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -558,6 +583,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D2BD72C328E2CAD500AF8DB9 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D2BD72C428E2CAD500AF8DB9 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2BD72C328E2CAD500AF8DB9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		D2BD72C628E2CAD500AF8DB9 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2BD72C328E2CAD500AF8DB9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		D2BD72C828E2CAD500AF8DB9 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2BD72C328E2CAD500AF8DB9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		D2BD72CA28E2CAE600AF8DB9 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2BD72C328E2CAD500AF8DB9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		D2BD72CC28E2CAE600AF8DB9 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2BD72C328E2CAD500AF8DB9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		D2BD72CE28E2CAE600AF8DB9 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2BD72C328E2CAD500AF8DB9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 20C21AA628CF104700DC9CD3 /* Project object */;
 }
