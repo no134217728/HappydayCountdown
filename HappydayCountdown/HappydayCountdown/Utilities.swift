@@ -24,7 +24,7 @@ class Utilities {
     
     init(moneyGetDay: Int = 5) {
         moneyDay = moneyGetDay
-        _ = Observable<Int>.interval(.seconds(60), scheduler: MainScheduler.instance).subscribe { [weak self] dt in
+        _ = Observable<Int>.interval(.seconds(60), scheduler: MainScheduler.instance).subscribe { [weak self] _ in
             guard let self = self else {
                 return
             }
