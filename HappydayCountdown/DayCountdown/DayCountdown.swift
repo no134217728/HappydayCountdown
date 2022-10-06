@@ -60,7 +60,7 @@ struct DayCountdown: Widget {
         }
         .configurationDisplayName("")
         .description("")
-        .supportedFamilies([.systemSmall])
+        .supportedFamilies([.systemMedium])
     }
 }
 
