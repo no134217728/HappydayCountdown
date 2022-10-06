@@ -24,7 +24,7 @@ class Utilities {
     
     init(moneyGetDay: Int = 5) {
         moneyDay = moneyGetDay
-        _ = Observable<Int>.interval(.seconds(60), scheduler: MainScheduler.instance).subscribe { [weak self] _ in
+        _ = Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance).subscribe { [weak self] _ in
             guard let self = self else {
                 return
             }
@@ -68,17 +68,32 @@ class Utilities {
                                  Utilities.shared.holidaySetup(month: 12, day: 31)]
         
         for holidayComponent in holidayComponents {
-            guard let daysToNextLongHoliday = Calendar.current.dateComponents([.day], from: todayComponent, to: holidayComponent).day else {
-                fatalError("Cannot compute the days due to the holiday components failure.")
+            guard let nextHolidayDateTime = holidayComponent.date else {
+                fatalError("Next holiday date parsing from the component failure.")
             }
-            if daysToNextLongHoliday >= 0 {
-                let dateNextLongHoliday = holidayComponent.clearedTimeDateAndComponent().date
-                nextLongHolidayDate.onNext(dateFormatter.string(from: dateNextLongHoliday))
-                toNextLongHolidayDaysTitle.onNext("連假倒數")
-                toNextLongHolidayDays.onNext("\(daysToNextLongHoliday) 天")
-                saveStringToUserDefault(content: dateFormatter.string(from: dateNextLongHoliday), theKey: .nextLongHolidayDate)
-                saveStringToUserDefault(content: "連假倒數", theKey: .toNextLongHolidayDaysTitle)
-                saveStringToUserDefault(content: "\(daysToNextLongHoliday) 天", theKey: .toNextLongHolidayDays)
+            let currentDateTime = Date()
+            if nextHolidayDateTime.timeIntervalSinceReferenceDate - currentDateTime.timeIntervalSinceReferenceDate > 0 {
+                guard let holiday = holidayComponent.date else {
+                    fatalError("Holiday components failure.")
+                }
+                var minusHolidayComponent = DateComponents()
+                minusHolidayComponent.hour = -6
+
+                guard let adjustedHolidayDateForComputing = Calendar.current.date(byAdding: minusHolidayComponent, to: holiday) else {
+                    fatalError("Adjusted holiday date failure.")
+                }
+                let countdownComponentsToNextLongHoliday = Calendar.current.dateComponents([.day, .hour, .minute, .second], from: currentDateTime, to: adjustedHolidayDateForComputing)
+                guard let day = countdownComponentsToNextLongHoliday.day, let hour = countdownComponentsToNextLongHoliday.hour, let minute = countdownComponentsToNextLongHoliday.minute, let second = countdownComponentsToNextLongHoliday.second else {
+                    fatalError("Countdown components failure.")
+                }
+                let countdownString = "\(day) 天 \(hour) 小時 \(minute) 分 \(second) 秒"
+                
+                nextLongHolidayDate.onNext(dateFormatter.string(from: nextHolidayDateTime))
+                toNextLongHolidayDaysTitle.onNext("下次連假倒數")
+                toNextLongHolidayDays.onNext(countdownString)
+                saveStringToUserDefault(content: dateFormatter.string(from: nextHolidayDateTime), theKey: .nextLongHolidayDate)
+                saveStringToUserDefault(content: "下次連假倒數", theKey: .toNextLongHolidayDaysTitle)
+                saveStringToUserDefault(content: "\(day) 天 \(hour) 小時 \(minute) 分", theKey: .toNextLongHolidayDays)
                 
                 return
             }
