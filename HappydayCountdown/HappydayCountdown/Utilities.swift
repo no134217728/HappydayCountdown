@@ -135,6 +135,7 @@ class Utilities {
     private func saveStringToUserDefault(content: String, theKey: UserDefaultKeys) {
         let userDefault = UserDefaults.standard
         userDefault.setValue(content, forKey: theKey.rawValue)
+        userDefault.synchronize()
     }
     
     func takeStringFromUserDefault(theKey: UserDefaultKeys) -> String {
