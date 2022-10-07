@@ -92,7 +92,7 @@ class Utilities {
                 toNextLongHolidayDaysTitle.onNext("下次連假倒數")
                 toNextLongHolidayDays.onNext(countdownString)
                 saveStringToUserDefault(content: dateFormatter.string(from: nextHolidayDateTime), theKey: .nextLongHolidayDate)
-                saveStringToUserDefault(content: "下次連假倒數", theKey: .toNextLongHolidayDaysTitle)
+                saveStringToUserDefault(content: "連假開始倒數", theKey: .toNextLongHolidayDaysTitle)
                 saveStringToUserDefault(content: "\(day) 天 \(hour) 小時 \(minute) 分", theKey: .toNextLongHolidayDays)
                 
                 return
