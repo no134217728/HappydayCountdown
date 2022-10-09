@@ -18,61 +18,61 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpB-o7-9ai">
-                                <rect key="frame" x="40" y="72" width="35" height="21"/>
+                                <rect key="frame" x="16" y="72" width="35" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smv-37-Dpt">
-                                <rect key="frame" x="180" y="72" width="46" height="21"/>
+                                <rect key="frame" x="156" y="72" width="46" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下次領錢日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCo-cX-u4y">
-                                <rect key="frame" x="40" y="117" width="104" height="21"/>
+                                <rect key="frame" x="16" y="117" width="104" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NextMoney" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Feg-uc-nZ5">
-                                <rect key="frame" x="180" y="117" width="87" height="21"/>
+                                <rect key="frame" x="156" y="117" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="領錢倒數" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRy-Tq-Ml3">
-                                <rect key="frame" x="40" y="162" width="70" height="21"/>
+                                <rect key="frame" x="16" y="162" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DaysToNextMoney" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2e-jf-P6A">
-                                <rect key="frame" x="180" y="162" width="141.5" height="21"/>
+                                <rect key="frame" x="156" y="162" width="141.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下次連假日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZ2-7s-GnE">
-                                <rect key="frame" x="40" y="207" width="87" height="21"/>
+                                <rect key="frame" x="16" y="207" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NextHoliday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZe-Fb-hdG">
-                                <rect key="frame" x="180" y="207" width="92.5" height="21"/>
+                                <rect key="frame" x="156" y="207" width="92.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="連假開始倒數" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZR-3Q-I9V">
-                                <rect key="frame" x="40" y="252" width="104" height="21"/>
+                                <rect key="frame" x="16" y="252" width="104" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DaysToNextHoliday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFQ-T3-TCv">
-                                <rect key="frame" x="180" y="252" width="147" height="21"/>
+                                <rect key="frame" x="156" y="252" width="147" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,7 +85,7 @@
                             <constraint firstItem="Feg-uc-nZ5" firstAttribute="leading" secondItem="smv-37-Dpt" secondAttribute="leading" id="3ek-vd-jzD"/>
                             <constraint firstItem="Feg-uc-nZ5" firstAttribute="centerY" secondItem="zCo-cX-u4y" secondAttribute="centerY" id="4DP-BV-b6Q"/>
                             <constraint firstItem="smv-37-Dpt" firstAttribute="leading" secondItem="zCo-cX-u4y" secondAttribute="trailing" constant="36" id="IOA-XH-UQm"/>
-                            <constraint firstItem="WpB-o7-9ai" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="JLv-dp-9l0"/>
+                            <constraint firstItem="WpB-o7-9ai" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JLv-dp-9l0"/>
                             <constraint firstItem="WpB-o7-9ai" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="NI0-RF-QHP"/>
                             <constraint firstItem="K2e-jf-P6A" firstAttribute="centerY" secondItem="PRy-Tq-Ml3" secondAttribute="centerY" id="O7s-9n-7lr"/>
                             <constraint firstItem="PZe-Fb-hdG" firstAttribute="leading" secondItem="K2e-jf-P6A" secondAttribute="leading" id="SZr-Q5-dST"/>
