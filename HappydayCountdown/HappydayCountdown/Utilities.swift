@@ -71,17 +71,19 @@ class Utilities {
             guard let nextHolidayDateTime = holidayComponent.date else {
                 fatalError("Next holiday date parsing from the component failure.")
             }
+            
+            guard let holiday = holidayComponent.date else {
+                fatalError("Holiday components failure.")
+            }
+            
+            var minusHolidayComponent = DateComponents()
+            minusHolidayComponent.hour = -6
+            guard let adjustedHolidayDateForComputing = Calendar.current.date(byAdding: minusHolidayComponent, to: holiday) else {
+                fatalError("Adjusted holiday date failure.")
+            }
+            
             let currentDateTime = Date()
-            if nextHolidayDateTime.timeIntervalSinceReferenceDate - currentDateTime.timeIntervalSinceReferenceDate > 0 {
-                guard let holiday = holidayComponent.date else {
-                    fatalError("Holiday components failure.")
-                }
-                var minusHolidayComponent = DateComponents()
-                minusHolidayComponent.hour = -6
-
-                guard let adjustedHolidayDateForComputing = Calendar.current.date(byAdding: minusHolidayComponent, to: holiday) else {
-                    fatalError("Adjusted holiday date failure.")
-                }
+            if adjustedHolidayDateForComputing.timeIntervalSinceReferenceDate - currentDateTime.timeIntervalSinceReferenceDate > 0 {
                 let countdownComponentsToNextLongHoliday = Calendar.current.dateComponents([.day, .hour, .minute, .second], from: currentDateTime, to: adjustedHolidayDateForComputing)
                 guard let day = countdownComponentsToNextLongHoliday.day, let hour = countdownComponentsToNextLongHoliday.hour, let minute = countdownComponentsToNextLongHoliday.minute, let second = countdownComponentsToNextLongHoliday.second else {
                     fatalError("Countdown components failure.")
