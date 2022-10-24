@@ -22,6 +22,35 @@ class Utilities {
     var toNextLongHolidayDaysTitle = PublishSubject<String>()
     var toNextLongHolidayDays = PublishSubject<String>()
     
+    private func holidayList(year: Int?) -> [DateComponents] {
+        var holidayComponents: [DateComponents] = []
+        
+        switch year {
+        case 2022:
+            holidayComponents = [Utilities.shared.holidaySetup(month: 1, day: 29),
+                                 Utilities.shared.holidaySetup(month: 2, day: 26),
+                                 Utilities.shared.holidaySetup(month: 4, day: 2),
+                                 Utilities.shared.holidaySetup(month: 4, day: 30),
+                                 Utilities.shared.holidaySetup(month: 6, day: 3),
+                                 Utilities.shared.holidaySetup(month: 9, day: 9),
+                                 Utilities.shared.holidaySetup(month: 10, day: 8),
+                                 Utilities.shared.holidaySetup(month: 12, day: 31)]
+        case 2023:
+            holidayComponents = [Utilities.shared.holidaySetup(month: 1, day: 20),
+                                 Utilities.shared.holidaySetup(month: 2, day: 25),
+                                 Utilities.shared.holidaySetup(month: 4, day: 1),
+                                 Utilities.shared.holidaySetup(month: 4, day: 29),
+                                 Utilities.shared.holidaySetup(month: 6, day: 22),
+                                 Utilities.shared.holidaySetup(month: 9, day: 29),
+                                 Utilities.shared.holidaySetup(month: 10, day: 7),
+                                 Utilities.shared.holidaySetup(month: 12, day: 30)]
+        default:
+            break
+        }
+        
+        return holidayComponents
+    }
+    
     init(moneyGetDay: Int = 5) {
         moneyDay = moneyGetDay
         _ = Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance).subscribe { [weak self] _ in
@@ -58,25 +87,9 @@ class Utilities {
         saveStringToUserDefault(content: dateFormatter.string(from: dateForNextMoney), theKey: .nextMoneyDate)
         saveStringToUserDefault(content: "\(daysToNextMoneyDate) 天", theKey: .toNextMoneyDays)
         
-        let holidayComponents2022 = [Utilities.shared.holidaySetup(month: 1, day: 29),
-                                 Utilities.shared.holidaySetup(month: 2, day: 26),
-                                 Utilities.shared.holidaySetup(month: 4, day: 2),
-                                 Utilities.shared.holidaySetup(month: 4, day: 30),
-                                 Utilities.shared.holidaySetup(month: 6, day: 3),
-                                 Utilities.shared.holidaySetup(month: 9, day: 9),
-                                 Utilities.shared.holidaySetup(month: 10, day: 8),
-                                 Utilities.shared.holidaySetup(month: 12, day: 31)]
+        let holidayComponents = holidayList(year: todayComponent.year)
         
-        let holidayComponents2023 = [Utilities.shared.holidaySetup(month: 1, day: 20),
-                                 Utilities.shared.holidaySetup(month: 2, day: 25),
-                                 Utilities.shared.holidaySetup(month: 4, day: 1),
-                                 Utilities.shared.holidaySetup(month: 4, day: 29),
-                                 Utilities.shared.holidaySetup(month: 6, day: 22),
-                                 Utilities.shared.holidaySetup(month: 9, day: 29),
-                                 Utilities.shared.holidaySetup(month: 10, day: 7),
-                                 Utilities.shared.holidaySetup(month: 12, day: 30)]
-        
-        for holidayComponent in holidayComponents2022 {
+        for holidayComponent in holidayComponents {
             guard let nextHolidayDateTime = holidayComponent.date else {
                 fatalError("Next holiday date parsing from the component failure.")
             }
