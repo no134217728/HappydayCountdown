@@ -7,3 +7,5 @@
 - 不知道什麼時候才會繼續做動態資料維護。但要錢架 server 不可能。現在很窮。
 - RxSwift 與 MVVM 版只是測試用。
 - 我要去睡了，有事 PR 托夢。
+
+<img src="Widget.png" width="25%" height="25%" /><img src="App.png" width="25%" height="25%" />
