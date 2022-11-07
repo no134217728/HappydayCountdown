@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WidgetKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         Utilities.shared.computeAllDayData()
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        WidgetCenter.shared.reloadAllTimelines()
     }
 }
 

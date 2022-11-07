@@ -10,6 +10,8 @@ import UIKit
 import RxSwift
 import RxRelay
 
+import WidgetKit
+
 class Utilities {
     static let shared = Utilities()
     
@@ -59,6 +61,7 @@ class Utilities {
             }
             
             self.computeAllDayData()
+            WidgetCenter.shared.reloadAllTimelines()
         }
     }
     
