@@ -97,13 +97,9 @@ class Utilities {
                 fatalError("Next holiday date parsing from the component failure.")
             }
             
-            guard let holiday = holidayComponent.date else {
-                fatalError("Holiday components failure.")
-            }
-            
             var minusHolidayComponent = DateComponents()
             minusHolidayComponent.hour = -6
-            guard let adjustedHolidayDateForComputing = Calendar.current.date(byAdding: minusHolidayComponent, to: holiday) else {
+            guard let adjustedHolidayDateForComputing = Calendar.current.date(byAdding: minusHolidayComponent, to: nextHolidayDateTime) else {
                 fatalError("Adjusted holiday date failure.")
             }
             
