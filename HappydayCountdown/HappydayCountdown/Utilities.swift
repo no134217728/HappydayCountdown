@@ -74,8 +74,8 @@ class Utilities {
         guard let todayDay = todayComponent.day else {
             fatalError("No day value due to the dateComponents failure.")
         }
-        todayDate.onNext(dateFormatter.string(from: Date()))
-        saveStringToUserDefault(content: dateFormatter.string(from: Date()), theKey: .todayDate)
+        todayDate.onNext(dateFormatter.string(from: dateToday))
+        saveStringToUserDefault(content: dateFormatter.string(from: dateToday), theKey: .todayDate)
         
         let addMonth = todayDay > moneyDay ? 1 : 0
         var nextMoneyComponent = Utilities.shared.dateAndcomponentFromDateWithNoTime(date: dateToday, addMonth: addMonth).components
