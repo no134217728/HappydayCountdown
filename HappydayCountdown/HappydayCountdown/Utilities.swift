@@ -147,10 +147,6 @@ class Utilities {
         var holidayComponent = Calendar.current.dateComponents(in: .current, from: Date())
         holidayComponent.month = month
         holidayComponent.day = day
-        holidayComponent.hour = 0
-        holidayComponent.minute = 0
-        holidayComponent.second = 0
-        holidayComponent.nanosecond = 0
         
         return holidayComponent.clearedTimeDateAndComponent().components
     }
