@@ -42,8 +42,8 @@ struct DayCountdownEntryView : View {
     var body: some View {
         VStack {
             Text("\(Utilities.shared.takeStringFromUserDefault(theKey: .todayDate))")
-            Text("💵 \(Utilities.shared.takeStringFromUserDefault(theKey: .toNextMoneyDays))")
-            Text("🛫 \(Utilities.shared.takeStringFromUserDefault(theKey: .toNextLongHolidayDays))")
+            Text("🥫 \(Utilities.shared.takeStringFromUserDefault(theKey: .toNextMoneyDays))")
+            Text("🐱 \(Utilities.shared.takeStringFromUserDefault(theKey: .toNextLongHolidayDays))")
         }.task {
             Utilities.shared.computeAllDayData()
         }
